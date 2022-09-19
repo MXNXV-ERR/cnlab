@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/cnlab/FileContentIndex/d20636bf-7a8b-4b58-a357-57523c48cfc8.vsidx
+.vs/cnlab/v17/.suo
+.vs/cnlab/FileContentIndex/read.lock
