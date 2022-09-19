@@ -26,7 +26,7 @@ int main()
         scanf("%s",&data);
         char ch='y';
         printf("CRC-16?(y/n)");
-        scanf(" %c",&ch);//ask if crc-16 to be used
+        scanf(" %c",&ch);//ask if crc-16 to be used or no
         if(ch=='y')
                 strncpy(divisor, "1100000000000101", 28); //standard crc-16 divisor
         else
