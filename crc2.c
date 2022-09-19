@@ -40,7 +40,5 @@ int main()
         printf("Modified data is:%s\n",data);
         crc();
         printf("Remainder is:%s\n",temp);
-        // for(i=l;i<l+N-1;i++)
-        //         data[i]=temp[i-l];//fix that one extra shift
         printf("\nFinal codeword is : %s\n",data);
 }
