@@ -12,13 +12,13 @@ void crc()
 {
         for(i=0;i<N;i++)
                 temp[i]=data[i];
-        do{
-                if(temp[0]=='1')
+        while(i<=l+N-1)//loop through len(data) + len(divisor) - 1
+        {        if(temp[0]=='1')
                         xorl();//if one encountered xor
                 for(j=0;j<N-1;j++)
                         temp[j]=temp[j+1]; //shift by a bit
                 temp[j]=data[i++]; //take the next bit
-        }while(i<=l+N-1);//loop through len(data) + len(divisor) - 1
+        }
 }
 int main()
 {
@@ -40,7 +40,7 @@ int main()
         printf("Modified data is:%s\n",data);
         crc();
         printf("Remainder is:%s\n",temp);
-        for(i=l;i<l+N-1;i++)
-                data[i]=temp[i-l];//fix that one extra shift
+        // for(i=l;i<l+N-1;i++)
+        //         data[i]=temp[i-l];//fix that one extra shift
         printf("\nFinal codeword is : %s\n",data);
 }

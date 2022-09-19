@@ -13,7 +13,8 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "console": "externalTerminal"
+            "console": "externalTerminal",
+            "preLaunchTask": "C/C++: gcc.exe build active file"
         },
         {
             "name": "(gdb) Launch",
