@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "cstdarg": "c",
-        "cstdio": "c"
+        "cstdio": "c",
+        "iostream": "cpp"
     }
 }
