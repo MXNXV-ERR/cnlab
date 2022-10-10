@@ -43,6 +43,9 @@ int main()
     cout<<"Enter the numbers\n";
     for(int i=0;i<n;i++)
         cin>>arr[i];
-	cout <<"Ans:"<<checkSum(arr, n,x) << endl;
+	 string ans=checkSum(arr,n,x);
+    cout<<"Ans:";
+    for (int i = 0; i < x; i++)
+        ans[i]=='0'?cout<<'1':cout<<'0';
 	return 0;
 }
