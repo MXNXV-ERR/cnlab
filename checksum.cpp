@@ -15,7 +15,7 @@ string addBinaryUtil(string a, string b)
 	}
 	return result;
 }
-
+//faltu
 string checkSum(string arr[], int n,int x)
 {
 	string result = "";
@@ -28,7 +28,7 @@ string checkSum(string arr[], int n,int x)
         arr[1]=result.substr(result.length()-x,x);
         return checkSum(arr,2,x);
     }
-}
+}c
 
 int main()
 {
