@@ -10,11 +10,11 @@ int gcd(int a, int h)
     }
 }
  int main()
-{   //e for encrypts(public key),k arbitary value,d for decrypts(private key)
-    int p,q,msg,e=2,k=2,d;
-    printf("Enter two prime numbers");
+{   //e for encrypts(public key),d for decrypts(private key)
+    int p,q,msg,e=2,d=e;
+    printf("Enter two prime numbers:");
     scanf("%d%d",&p,&q);
-    printf("Enter the messsage");
+    printf("Enter the messsage:");
     scanf("%d",&msg);
     int n=p*q,phi_of_n = (p-1)*(q-1);
     //for checking co-prime which satisfies e>1
@@ -25,9 +25,7 @@ int gcd(int a, int h)
         else
             e++;
     }
-    //choosing d such that it satisfies d*e = 1 + k * phi_of_n
-    d=e;
-    //d = (1 + (k*phi_of_n))/e;
+    //choosing d such that it satisfies d*e mod phi_of_n= 1 
     while(1)
     {
         if(fmod(d*e,phi_of_n)==1)
