@@ -2,14 +2,12 @@
 #include<string.h>
 char data[28],temp[28],divisor[28],q[28];
 int l,i,j,N=16;
-
-void xorl(){
-    for(j=1;j<N;j++) //simple xor opration for all bits of divisor
+void xorl()
+{   for(j=1;j<N;j++) //simple xor opration for all bits of divisor
                 temp[j]=((temp[j]==divisor[j])?'0':'1');
 }
-
-void crc(){
-    for(i=0;i<N;i++)
+void crc()
+{   for(i=0;i<N;i++)
         temp[i]=data[i];
     int w=0;    
     do{
@@ -21,7 +19,6 @@ void crc(){
 
     }while(i<=l+N-1);//loop through len(data) + len(divisor) - 1
 }
-
 void main()
 {
 	int choice,flag;char ch='y';
