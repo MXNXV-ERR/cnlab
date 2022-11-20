@@ -1,3 +1,6 @@
+// Write a program for implementing the error detection technique for data transfer in
+// unreliable network code using CRC (16-bits) Technique.
+
 #include<stdio.h>
 #include<string.h>
 char data[28],temp[28],divisor[28],q[28];

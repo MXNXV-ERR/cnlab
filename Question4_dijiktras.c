@@ -1,3 +1,6 @@
+// Given a graph find shortest paths from source to all nodes using Dijkstra’s shortest path
+// algorithm.
+
 #include<stdio.h>//Standard input output
 int main()//Main function
 {

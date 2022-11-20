@@ -1,3 +1,5 @@
+// Write a program to implement the Diffie-Hellman Key Exchange algorithm.
+
 #include <stdio.h>
  // Function to compute `a^m mod n`
 int compute(int a, int m, int n)

@@ -1,3 +1,5 @@
+// Write a program for simple RSA algorithm to encrypt and decrypt the data.
+
 #include<stdio.h>
 #include<math.h>
 int gcd(int a, int h)
