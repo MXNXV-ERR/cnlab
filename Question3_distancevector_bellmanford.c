@@ -17,14 +17,14 @@ int main()
     for(i=0;i<nodes;i++)
         for(j=0;j<nodes;j++)
             {   scanf("%d",&costmat[i][j]);
-                costmat[i][i]=0;
-                rt[i].dist[j]=costmat[i][j];//initialise the distance equal to cost matrix
+                costmat[i][i]=0;//initialise the distance equal to cost matrix
+                rt[i].dist[j]=costmat[i][j];
                 rt[i].from[j]=j;
             }
     do
     {   count=0;
-       //We choose arbitary vertex k and we calculate the direct distance from the node i to k using the cost matrix
-        //and add the distance from k to node j
+ //We choose arbitary vertex k and we calculate the direct distance from 
+//the node i to k using the cost matrix and add the distance from k to node j
         for(i=0;i<nodes;i++)
             for(j=0;j<nodes;j++)
                 for(k=0;k<nodes;k++)

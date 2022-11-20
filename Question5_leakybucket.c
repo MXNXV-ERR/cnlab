@@ -12,16 +12,16 @@ int main(){
         scanf("%d", &incoming);
         printf("Incoming packet size %d\n", incoming);
         if (incoming <= (buck_size - store))
-        {   store += incoming;
+        {   store += incoming;//Add to bucket
             printf("Bucket buffer size %d out of %d\n", store, buck_size);
         } 
         else 
         {   printf("DROPPED %d no of packets\n", incoming - (buck_size - store));
             printf("Bucket buffer size %d out of %d\n", store, buck_size);
-            store = buck_size;
+            store = buck_size;//Drop extra packets
         }
         store = store - outgoing;
         printf("After outgoing %d packets left out of %d in buffer\n", store, buck_size);
-        n--;
+        n--;//Remove outgoing packet from full size of bucket
     }
 }

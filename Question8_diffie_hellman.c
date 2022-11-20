@@ -13,10 +13,8 @@ int compute(int a, int m, int n)
     }
     return y;
 }
- 
 int main()
-{
-    int p,g;//p=prime number,g=alpha
+{   int p,g;//p=prime number,g=alpha
     printf("Enter a prime number and alpha value(alpha should satisfy the condition)");
     scanf("%d%d",&p,&g);  
     int a, b;    // `a` – A's secret key, `b` – B's secret key.
