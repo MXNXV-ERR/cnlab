@@ -16,14 +16,13 @@ void crc()
         for(j=0;j<N-1;j++)
             temp[j]=temp[j+1]; //shift by a bit
         temp[j]=data[i++]; //take the next bit
-
     }while(i<=l+N-1);//loop through len(data) + len(divisor) - 1
 }
 void main()
 {
 	int choice,flag;char ch='y';
-start:		
-    printf("\n\nEnter the data\n");
+while(1)
+{   printf("\n\nEnter the data\n");
 	scanf("%s",&data);
     
     printf("CRC-16?(y/n): ");
@@ -75,5 +74,6 @@ final:
 	 printf("Enter the values again?(y/n): ");
     scanf(" %c",&ch);//ask user to restart or not
     if(ch=='y')
-        goto start;
+       break;
+}
 }
