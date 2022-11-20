@@ -24,7 +24,7 @@ void main()
 {
 	int choice,flag;char ch;
     repeat:
-        printf("\n\nEnter new data\n");
+        printf("Enter new data\n");
     	scanf("%s",&data);
         //ask if crc-16 to be used or no
         printf("CRC-16?(y/n): ");
@@ -40,7 +40,7 @@ void main()
         l=strlen(data);
         while(1)
         {
-            printf("\n\nMenu: \n1. Find final codeword(Sender's Side)\n");
+            printf("\nMenu: \n1. Find final codeword(Sender's Side)\n");
         	printf("2. Check The Code word(Receiver's Side)\n");
             printf("3. Enter diffrenet values\n");
             printf("4. EXIT\n");
@@ -56,7 +56,7 @@ void main()
                         printf("\nGenerating polynomial: %s\n",divisor);
                         printf("Modified data is: %s\n",data);
                         printf("Remainder is: %s\n",temp);
-                        printf("\nFinal codeword is : %s\n",data);
+                        printf("Final codeword is : %s\n",data);
                         break;
             case 2:flag=0;
                         printf("Enter the recieved data on recievers side");
