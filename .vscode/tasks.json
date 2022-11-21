@@ -10,7 +10,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-std=c99"
+                //"-std=c99"
             ],
             "options": {
                 "cwd": "${fileDirname}"

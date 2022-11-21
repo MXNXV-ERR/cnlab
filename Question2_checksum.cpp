@@ -15,7 +15,6 @@ string addBinaryUtil(string a, string b)
 	}
 	return result;
 }
-//faltu
 string checkSum(string arr[], int n,int x)
 {
 	string result = "";
@@ -47,3 +46,4 @@ int main()
         ans[i]=='0'?cout<<'1':cout<<'0';
 	return 0;
 }
+
