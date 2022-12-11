@@ -14,7 +14,7 @@ Also this generates two new file in the folder where the Q1.tcl is present<br>
 *prog1.tr <br>
 Due to code in Q1.tcl<br>
 
-<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/ns2/documentation/Q11.png?raw=True"></P>
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/cnlab/blob/main/ns2/documentation/Q11.png?raw=True"></P>
 
 
 ## 3)Executing the awk file 
@@ -23,4 +23,4 @@ Awk file typically used as a data extraction and reporting tool.
 awk -f Q1.awk prog1.tr
 ```
 Expected output:
-<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/ns2/documentation/Q12.png?raw=True"></P>
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/cnlab/blob/main/ns2/documentation/Q12.png?raw=True"></P>
