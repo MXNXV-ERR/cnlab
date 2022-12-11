@@ -29,7 +29,8 @@ exit 0
 ### 3) Setting Node and Link
 #### Node
 Syntax:
-```
+```bash
+set node_name [$ns node]
 ```
 
 ```bash
@@ -38,12 +39,22 @@ set n1 [$ns node]
 set n2 [$ns node]
 ```
 #### Link
+Syntax:
+```bash
+$ns link-type $node1 $node2 bandwidth delay dropping_mechanism
+```
+
 ```bash
 $ns duplex-link $n0 $n1 1Mb 10ms DropTail
 $ns duplex-link $n1 $n2 512Kb 10ms DropTail
 $ns queue-limit $n1 $n2 5
 ```
 ### 4) Setting Agent
+
+|Sender|Reciever|
+|---|---|
+|UDP|NULL|
+|TCP|TCPSink|
 ```bash
 set udp0 [new Agent/UDP]
 $ns attach-agent $n0 $udp0
@@ -54,7 +65,7 @@ $ns attach-agent $n2 $sink
 $ns connect $udp0 $sink
 ```
 
-### 5) Settting Application
+### 5) Setting Application
 ```bash
 set cbr0 [new Application/Traffic/CBR]
 $cbr0 set packetSize_ 500
@@ -63,6 +74,14 @@ $cbr0 attach-agent $udp0
 ```
 
 ### 6) Setting simulation times and shedules
+Syntax:
+```bash
+$ns at time "$Application_name start/stop"
+#to completely finish
+$ns at time "finish"
+#to run simulation
+$ns run
+```
 ```bash
 $ns at 0.2 "$cbr0 start"
 $ns at 4.5 "$cbr0 stop"
