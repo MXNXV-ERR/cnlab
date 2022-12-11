@@ -1,3 +1,4 @@
+#Create a new Simulator
 set ns [new Simulator]
 set nf [open prog1.nam w]
 $ns namtrace-all $nf
