@@ -1,51 +1,74 @@
-#Create a new Simulator
+# NS2 Instruction
+
+## TCL file
+
+"Tcl casts everything into the mold of a command, even programming constructs like variable assignment and procedure definition."<br>-Wikipedia
+
+## Structure of TCL file
+
+### 1)Declaring Simulator and setting output file
+```SHELL
 set ns [new Simulator]
-#Creating nam file to record nam trace
 set nf [open prog1.nam w]
 $ns namtrace-all $nf
-#Creating tr file to record trace
 set nd [open prog1.tr w]
 $ns trace-all $nd
-
-#Standard finish{} procedure
+```
+### 2) Declaring finish{}
+```SHELL
 proc finish { } {
 global ns nf nd
 $ns flush-trace
-#Closing files before exit
 close $nf
 close $nd
-#Executing the Network AniMator(NAM)
 exec nam prog1.nam &
 exit 0
 }
+```
 
-#Creating 3 nodes
+### 3) Setting Node and Link
+#### Node
+Syntax:
+
+```SHELL
 set n0 [$ns node]
 set n1 [$ns node]
 set n2 [$ns node]
-
-#Setting up links between nodes
+```
+#### Link
+```SHELL
 $ns duplex-link $n0 $n1 1Mb 10ms DropTail
 $ns duplex-link $n1 $n2 512Kb 10ms DropTail
 $ns queue-limit $n1 $n2 5
-
-#Setting up agents on each node
+```
+### 4) Setting Agent
+```SHELL
 set udp0 [new Agent/UDP]
 $ns attach-agent $n0 $udp0
+```
+```SHELL
 set sink [new Agent/Null]
 $ns attach-agent $n2 $sink
 $ns connect $udp0 $sink
+```
 
-#Setting up application CBR(Constant bitrate)
+### 5) Settting Application
+```SHELL
 set cbr0 [new Application/Traffic/CBR]
 $cbr0 set packetSize_ 500
 $cbr0 set interval_ 0.005
 $cbr0 attach-agent $udp0
+```
 
-
-
+### 6) Setting simulation times and shedules
+```SHELL
 $ns at 0.2 "$cbr0 start"
 $ns at 4.5 "$cbr0 stop"
 $ns at 5.0 "finish"
 $ns run
+```
 
+
+## AWK file
+
+"Used for purposes of extracting or transforming text, such as producing formatted reports."<br>-Wikipedia
