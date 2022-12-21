@@ -26,7 +26,7 @@ set n2 [$ns node]
 
 #Setting up links between nodes
 $ns duplex-link $n0 $n1 1Mb 10ms DropTail
-$ns duplex-link $n1 $n2 128Kb 10ms DropTail
+$ns duplex-link $n1 $n2 512Kb 10ms DropTail
 $ns queue-limit $n1 $n2 5
 
 #Setting up agents on each node

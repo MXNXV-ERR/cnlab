@@ -4,6 +4,26 @@
 
 "Tcl casts everything into the mold of a command, even programming constructs like variable assignment and procedure definition."<br>-Wikipedia
 
+## Common in all programs
+```bash
+set ns [new Simulator]
+set nf [open progX.nam w]
+$ns namtrace-all $nf
+set nd [open progX.tr w]
+$ns trace-all $nd
+
+proc finish { } {
+global ns nf nd
+$ns flush-trace
+close $nf
+close $nd
+exec nam progX.nam &
+exit 0
+}
+
+```
+
+
 ## Structure of TCL file
 
 ### 1)Declaring Simulator and setting output file
