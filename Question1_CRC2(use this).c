@@ -50,11 +50,11 @@ void main()
             {
             case 1: for(i=l;i<l+N-1;i++)
                             data[i]='0';
+                        printf("\nGenerating polynomial: %s\n",divisor);
+                        printf("Modified data is: %s\n",data);
                         crc();
                         for(i=l;i<l+N-1;i++)
                             data[i]=temp[i-l];//fix that one extra shift
-                        printf("\nGenerating polynomial: %s\n",divisor);
-                        printf("Modified data is: %s\n",data);
                         printf("Remainder is: %s\n",temp);
                         printf("Final codeword is : %s\n",data);
                         break;
