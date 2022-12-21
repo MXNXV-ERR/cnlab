@@ -26,7 +26,7 @@ set n2 [$ns node]
 
 #Setting up links between nodes
 $ns duplex-link $n0 $n1 1Mb 10ms DropTail
-$ns duplex-link $n1 $n2 512Kb 10ms DropTail
+$ns duplex-link $n1 $n2 128Kb 10ms DropTail
 $ns queue-limit $n1 $n2 5
 
 #Setting up agents on each node
@@ -43,7 +43,7 @@ $cbr0 set interval_ 0.005
 $cbr0 attach-agent $udp0
 
 
-
+#Schedules to start the  components
 $ns at 0.2 "$cbr0 start"
 $ns at 4.5 "$cbr0 stop"
 $ns at 5.0 "finish"

@@ -17,7 +17,7 @@ set n1 [$ns node]
 set n2 [$ns node]
 set n3 [$ns node]
 #set color to the nodes
- $n1 color blue
+$n1 color blue
 $n0 color red
 $n2 color purple
 $n3 color orange
