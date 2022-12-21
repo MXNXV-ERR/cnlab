@@ -1,6 +1,5 @@
-#create Simulator
+#Create Simulator
 set ns [new Simulator]
-
 #Open Trace and NAM Trace File
 set ntrace [open prog2.tr w]
 $ns trace-all $ntrace
@@ -10,12 +9,10 @@ $ns namtrace-all $namfile
 #Finish Procedure
 proc Finish {} {
 global ns ntrace namfile
-
 #Dump all trace data and close the files
 $ns flush-trace
 close $ntrace
 close $namfile
-
 #Execute the nam animation file
 exec nam prog2.nam &
 exit 0
