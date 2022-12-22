@@ -69,7 +69,7 @@ $ns at 0.5 "$telnet start"
 $ns at 0.5 "$ftp0 start"
 $ns at 24.5 "$telnet stop"
 $ns at 24.5 "$ftp0 stop"
-$ns at 25.0 "Finish"
+$ns at 25.0 "finish"
 
 $ns run
 
