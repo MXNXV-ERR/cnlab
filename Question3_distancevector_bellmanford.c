@@ -5,8 +5,8 @@
 
 #include<stdio.h>
 struct node
-{   unsigned dist[20];
-    unsigned from[20];
+{   int dist[20];
+    int from[20];
 }rt[10];
 int main()
 {   int costmat[20][20];
@@ -37,8 +37,8 @@ int main()
     }while(count!=0);
     for(i=0;i<nodes;i++)
     {   printf("\n\n For router %d\n",i+1);
-            for(j=0;j<nodes;j++)
-                printf("\t\nNode %d via %d Distance = %d ",j+1,rt[i].from[j]+1,rt[i].dist[j]);
+        for(j=0;j<nodes;j++)
+            printf("\t\nNode %d via %d Distance = %d ",j+1,rt[i].from[j]+1,rt[i].dist[j]);
     }
     printf("\n\n");
 }
