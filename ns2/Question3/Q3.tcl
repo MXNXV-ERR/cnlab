@@ -8,6 +8,7 @@ proc finish {} {
 global ns nf nd
 $ns flush-trace
 close $nf
+close $nd
 exec nam prog3.nam &
 exit 0
 }

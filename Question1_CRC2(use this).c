@@ -3,6 +3,7 @@
 
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 char data[28],temp[28],divisor[28];
 int l,i,j,N=16;
 void xorl()
